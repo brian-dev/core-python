@@ -1,0 +1,7 @@
+python_api:
+  ssh_url: 'git@github.com:brian-dev/python_api.git'
+  repo_project_name: 'python_api'
+
+python_behave:
+  ssh_url: 'git@github.com:brian-dev/python_behave.git'
+  repo_project_name: 'pyhon_behave'
