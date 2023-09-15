@@ -53,10 +53,5 @@ def sample_func():
     rprint(f"[green]{target_repo['target_repo']} was successfully cloned.[green]")
 
 
-@app.command("hello")
-def sample_func():
-    rprint("[red bold]Hello[/red bold] [yellow]World[yello]")
-
-
 if __name__ == "__main__":
     app()
