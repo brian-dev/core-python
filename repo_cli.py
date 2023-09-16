@@ -1,6 +1,6 @@
 import git
 import typer
-import yaml
+import yaml_files
 import re
 
 from PyInquirer import prompt, print_json, Separator
@@ -10,8 +10,8 @@ app = typer.Typer()
 
 
 def load_repo_file(repo_name):
-    with open(f'./yaml/repos.yaml') as file_read:
-        test_repo = yaml.load(file_read, Loader=yaml.FullLoader)
+    with open(f'yaml_files/repos.yaml') as file_read:
+        test_repo = yaml_files.load(file_read, Loader=yaml_files.FullLoader)
     return test_repo[repo_name]
 
 

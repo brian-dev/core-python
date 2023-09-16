@@ -4,7 +4,7 @@ from core_framework.api import Api
 
 
 def load_project_properties():
-    with open(f'yaml/properties.yaml') as file_read:
+    with open(f'yaml_files/properties.yaml') as file_read:
         props = yaml.load(file_read, Loader=yaml.FullLoader)
     return props
 
