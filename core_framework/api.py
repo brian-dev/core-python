@@ -1,8 +1,5 @@
-import os
 import requests
 import yaml
-
-import core_framework.core as core
 
 
 def auth_headers(token):
@@ -10,7 +7,7 @@ def auth_headers(token):
 
 
 def get_base_url():
-    with open(f'yaml/properties.yaml') as file_read:
+    with open(f'yaml_files/properties.yaml') as file_read:
         props = yaml.load(file_read, Loader=yaml.FullLoader)
     return props['base_url']
 
