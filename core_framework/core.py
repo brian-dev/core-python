@@ -16,7 +16,6 @@ def load_framework_properties():
 
 
 class Core:
-    project_name = 'python_api'
     project_props = load_project_properties()
     core_props = load_framework_properties()
 
