@@ -1,9 +1,8 @@
 import git
 import typer
-import yaml_files
-import re
+import yaml
 
-from PyInquirer import prompt, print_json, Separator
+from PyInquirer import prompt
 from rich import print as rprint
 
 app = typer.Typer()
@@ -11,7 +10,7 @@ app = typer.Typer()
 
 def load_repo_file(repo_name):
     with open(f'yaml_files/repos.yaml') as file_read:
-        test_repo = yaml_files.load(file_read, Loader=yaml_files.FullLoader)
+        test_repo = yaml.safe_load(file_read)
     return test_repo[repo_name]
 
 
