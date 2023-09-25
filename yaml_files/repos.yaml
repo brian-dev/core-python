@@ -2,6 +2,6 @@ notes_api:
   ssh_url: 'git@github.com:brian-dev/notes_api.git'
   repo_project_name: 'notes_api'
 
-python_behave:
-  ssh_url: 'git@github.com:brian-dev/python_behave.git'
-  repo_project_name: 'pyhon_behave'
+notes_ui_behave:
+  ssh_url: 'git@github.com:brian-dev/notes_ui_behave.git'
+  repo_project_name: 'notes_ui_behave'

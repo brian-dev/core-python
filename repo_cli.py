@@ -31,7 +31,7 @@ def sample_func():
                             'name': 'Notes API',
                         },
                         {
-                            'name': 'Python Behave',
+                            'name': 'Notes UI Behave',
                         },
                         {
                             'name': 'example_2',
