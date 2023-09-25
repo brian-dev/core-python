@@ -28,10 +28,11 @@ class Browser:
     def chrome_browser(self):
         if self.headless:
             options = get_chrome_options()
-            browser = webdriver.Chrome(chrome_options=options, service=ChromeService(ChromeDriverManager(version='114.0.5735.90').install()))
+            chrome = webdriver.Chrome(chrome_options=options, service=ChromeService(ChromeDriverManager(
+                version='114.0.5735.90').install()))
         else:
-            browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager(version='114.0.5735.90').install()))
-        return browser
+            chrome = webdriver.Chrome(service=ChromeService(ChromeDriverManager(version='114.0.5735.90').install()))
+        return chrome
 
     # def brave_browser(self):
     #     if self.headless:
