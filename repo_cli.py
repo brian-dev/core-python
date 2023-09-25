@@ -28,7 +28,7 @@ def sample_func():
             'message': 'Select a project repository: ',
             'choices': [
                         {
-                            'name': 'Python API',
+                            'name': 'Notes API',
                         },
                         {
                             'name': 'Python Behave',
