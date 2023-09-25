@@ -28,8 +28,7 @@ class Browser:
     def chrome_browser(self):
         if self.headless:
             options = get_chrome_options()
-            service = Service(ChromeDriverManager(version='114.0.5735.90').install())
-            chrome = webdriver.Chrome(options=options, service=service)
+            chrome = webdriver.Chrome(options=options)
         else:
             chrome = webdriver.Chrome(service=ChromeService(ChromeDriverManager(version='114.0.5735.90').install()))
         return chrome
