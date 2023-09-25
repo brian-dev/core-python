@@ -22,6 +22,7 @@ class Core:
 
     def initialize_core(self, browser_name='', headless=''):
         browser = ''
+        print(self.project_props['project_type'])
         if self.project_props['project_type'] == 'api':
             return Api()
         else:
