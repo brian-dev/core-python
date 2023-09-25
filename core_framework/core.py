@@ -21,6 +21,7 @@ class Core:
     core_props = load_framework_properties()
 
     def initialize_core(self, browser_name='', headless=''):
+        browser = ''
         if self.project_props['project_type'] == 'api':
             return Api()
         else:
@@ -29,8 +30,8 @@ class Core:
                     browser = Browser(headless).chrome_browser()
                 case 'firefox':
                     browser = Browser(headless).firefox_browser()
-                case 'brave':
-                    browser = Browser(headless).brave_browser()
+                # case 'brave':
+                #     browser = Browser(headless).brave_browser()
             return browser
 
     def get_core_props(self):
