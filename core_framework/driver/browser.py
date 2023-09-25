@@ -6,7 +6,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
 
 
 def get_chrome_options():
@@ -34,17 +33,17 @@ class Browser:
             browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager(version='114.0.5735.90').install()))
         return browser
 
-    def brave_browser(self):
-        if self.headless:
-            options = get_chrome_options()
-            browser = webdriver.Chrome(
-                service=BraveService(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install()),
-                chrome_options=options
-            )
-        else:
-            browser = webdriver.Chrome(
-                service=BraveService(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install()))
-        return browser
+    # def brave_browser(self):
+    #     if self.headless:
+    #         options = get_chrome_options()
+    #         browser = webdriver.Chrome(
+    #             service=BraveService(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install()),
+    #             chrome_options=options
+    #         )
+    #     else:
+    #         browser = webdriver.Chrome(
+    #             service=BraveService(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install()))
+    #     return browser
 
     def firefox_browser(self):
         if self.headless:
