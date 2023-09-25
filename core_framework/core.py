@@ -28,12 +28,11 @@ class Core:
         else:
             match browser_name:
                 case 'chrome':
-                    browser = Browser(headless).chrome_browser()
+                    return Browser(headless).chrome_browser()
                 case 'firefox':
-                    browser = Browser(headless).firefox_browser()
+                    return Browser(headless).firefox_browser()
                 # case 'brave':
                 #     browser = Browser(headless).brave_browser()
-            return browser
 
     def get_core_props(self):
         return self.project_props
