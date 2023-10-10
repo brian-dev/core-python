@@ -27,7 +27,7 @@ class Api:
         url = f"{self.base_url}/{endpoint}"
         return requests.post(url, payload, headers=auth_headers(token))
 
-    def del_req(self, endpoint, token):
+    def del_req_with_auth(self, endpoint, token):
         url = f"{self.base_url}/{endpoint}"
         return requests.delete(url, headers=auth_headers(token))
 

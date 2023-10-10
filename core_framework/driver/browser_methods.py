@@ -28,7 +28,10 @@ class BrowserMethods:
     def validate_url(self, page):
         current_url = self.get_current_url()
         url_file = self.context.yaml_utils.get_env_urls()
-        expected_url = url_file['base_url'] + url_file[page]
+        if page == 'home':
+            expected_url = url_file['base_url']
+        else:
+            expected_url = url_file['base_url'] + url_file[page]
         return current_url, expected_url
 
     def wait_until_visible(self, strategy, locator_text):
