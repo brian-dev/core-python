@@ -10,3 +10,4 @@ selenium>=4.12.0
 behave>=1.2.6
 jsonlines>=4.0.0
 selenium-wire
+webdriver-manager >=4.0.0
